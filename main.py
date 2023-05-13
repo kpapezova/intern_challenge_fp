@@ -39,6 +39,7 @@ shortest_length, s_name = users.get_shortest()
 report_data = {"number of mentees" : number_of_mentees, "languages" : list(all_lang), "average full name length" : avg_length, "longest length full name/s" : (longest_length, l_name), "shortest length full name/s" : (shortest_length, s_name)}
 
 
+with open('mentees_report.json', 'w') as f:
+    json.dump(report_data, f, indent=4)
 
-# with open("report.json", "w") as f:
-#     json.dump(report_data, f, indent=4)
+print('A report named "mentees_report.json" has been created.')
