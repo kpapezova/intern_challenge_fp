@@ -61,3 +61,14 @@ class Mentee:
                 pass
 
         return shortest_len, shortest_names
+    
+
+if __name__ == "__main__":
+    users = Mentee("mentees_list.csv")
+    print(users.data)
+    print(f"Number of mentees: {users.num_of_mentees}")
+    print(f"Set of languages that all mentees speak {users.languages}")
+    print(f"Mentees full names {users.full_names}")
+    print(f"An average length of mentees full names is {users.get_average()} characters.")
+    print(f"The longest full name/s: {users.get_longest()[1]} with {users.get_longest()[0]} characters.")
+    print(f"The shortest full name/s: {users.get_shortest()[1]} with {users.get_shortest()[0]} characters.")
