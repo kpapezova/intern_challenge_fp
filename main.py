@@ -14,11 +14,15 @@ print(users.data)
 # users = mentee.Mentee(csv_input)
 # print(users.data)
 
+"""Get a number of all mentees"""
+number_of_mentees = users.num_of_mentees
+print(number_of_mentees)
+
+"""Set of all languages that mentees know"""
+all_lang = users.languages
+print(users.languages)
 
 '''
-number_of_mentees = user.count_mentees(loaded_data)
-# print(f"Number of mentees: {number_of_mentees}")
-
 languages = user.spoken_languages(loaded_data)
 # print(f"Set of all languages: {languages}")
 

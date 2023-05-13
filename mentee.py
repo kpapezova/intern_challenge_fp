@@ -7,26 +7,11 @@ class Mentee:
 
     def __init__(self, data):
         self.data = pd.read_csv(data)
-
+        self.num_of_mentees = len(self.data)
+        self.languages = set(self.data['language'])
 
 
 '''
-    def count_mentees(self, data):
-        "Count mentees and return the number of mentees"
-        num_of_mentees = len(data)
-        return num_of_mentees
-
-
-    def spoken_languages(self, data):
-        "Return a set of languages that all mentees know"
-        all_languages = set()
-
-        for row in data:
-            language = row["language"]
-            all_languages.add(language)
-
-        return all_languages
-
 
     def prep_fullname(self, data):
         "Return a list of mentees full names"
