@@ -12,13 +12,12 @@ class Mentee:
         self.full_names = self.data['first_name'.strip()] + ' ' + self.data['last_name'.strip()]
 
 
-'''
-    def get_average(self, fullnames):
+    def get_average(self):
         "Return an average length of mentees full names"
         inp_lst = []
         
-        for i in range(len(fullnames)):
-            length = len(fullnames[i]) - fullnames[i].count(" ")
+        for i in range(len(self.full_names)):
+            length = len(self.full_names[i]) - self.full_names[i].count(" ")
             inp_lst.append(length)
 
         list_avg = round(mean(inp_lst))
@@ -26,41 +25,39 @@ class Mentee:
         return list_avg
 
 
-    def get_longest(self, fullnames):
+    def get_longest(self):
         "Return longest full name/s"
         longest_len = 0
         longest_names = [" "]
 
-        for i in range(len(fullnames)):
-            length = len(fullnames[i]) - fullnames[i].count(" ")
+        for i in range(len(self.full_names)):
+            length = len(self.full_names[i]) - self.full_names[i].count(" ")
             if length > longest_len:
                 longest_names.clear()
-                longest_names.append(fullnames[i])
+                longest_names.append(self.full_names[i])
                 longest_len = length
             elif length == longest_len:
-                longest_names.append(fullnames[i])
+                longest_names.append(self.full_names[i])
             else:
                 pass
 
         return longest_len, longest_names
 
 
-    def get_shortest(self, fullnames):
+    def get_shortest(self):
         "Return shortest full name/s"
         shortest_len = 20
         shortest_names = [" "]
 
-        for i in range(len(fullnames)):
-            length = len(fullnames[i]) - fullnames[i].count(" ")
+        for i in range(len(self.full_names)):
+            length = len(self.full_names[i]) - self.full_names[i].count(" ")
             if length < shortest_len:
                 shortest_names.clear()
-                shortest_names.append(fullnames[i])
+                shortest_names.append(self.full_names[i])
                 shortest_len = length
             elif length == shortest_len:
-                shortest_names.append(fullnames[i])
+                shortest_names.append(self.full_names[i])
             else:
                 pass
 
         return shortest_len, shortest_names
-
-'''

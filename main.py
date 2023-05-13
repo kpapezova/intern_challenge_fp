@@ -27,20 +27,21 @@ print(users.languages)
 names = users.full_names
 print(names)
 
+"""Average length of mentees full name"""
+avg_length = users.get_average()
+print(f"An average length of mentees full names is {avg_length} characters.")
+
+
+"""Longest name/s"""
+longest_length, l_name = users.get_longest()
+print(f"The longest full name has this user: {l_name} with {longest_length} characters.") 
+
+
+"""Shortes name/s"""
+shortest_length, s_name = users.get_shortest()
+print(f"The shortest full name has this user {s_name} with {shortest_length} characters.")
+
 '''
-
-full_names = user.prep_fullname(loaded_data)        # prepare list of full names of all mentees
-
-avg_length = user.get_average(full_names)
-# print(f"An average length of mentees full names is {avg_length} characters.")
-
-longest_length, l_name = user.get_longest(full_names)
-# print(f"The longest full name has this user: {l_name} with {longest_length} characters.") 
-
-shortest_length, s_name = user.get_shortest(full_names)
-# print(f"The shortest full name has this user {s_name} with {shortest_length} characters.")
-
-
 #  Report
 report_data = {"number of mentees" : number_of_mentees, "languages" : list(languages), "average full name length" : avg_length, "longest length full name/s" : (longest_length, l_name), "shortest length full name/s" : (shortest_length, s_name)}
 
