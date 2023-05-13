@@ -18,13 +18,16 @@ print(users.data)
 number_of_mentees = users.num_of_mentees
 print(number_of_mentees)
 
+
 """Set of all languages that mentees know"""
 all_lang = users.languages
 print(users.languages)
 
+"""Preparation of full names"""
+names = users.full_names
+print(names)
+
 '''
-languages = user.spoken_languages(loaded_data)
-# print(f"Set of all languages: {languages}")
 
 full_names = user.prep_fullname(loaded_data)        # prepare list of full names of all mentees
 

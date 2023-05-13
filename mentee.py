@@ -9,22 +9,10 @@ class Mentee:
         self.data = pd.read_csv(data)
         self.num_of_mentees = len(self.data)
         self.languages = set(self.data['language'])
+        self.full_names = self.data['first_name'.strip()] + ' ' + self.data['last_name'.strip()]
 
 
 '''
-
-    def prep_fullname(self, data):
-        "Return a list of mentees full names"
-        full_names = []
-
-        for row in data:
-            first_name = row["first_name"]
-            last_name = row["last_name"]
-            full_names.append(first_name + " " + last_name)
-
-        return full_names
-
-
     def get_average(self, fullnames):
         "Return an average length of mentees full names"
         inp_lst = []
