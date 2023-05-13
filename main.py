@@ -4,10 +4,18 @@ import json
 
 # refactoring
 
-user = mentee.Mentee()
+"""Load mentees from csv"""
+csv_file = "mentees_list.csv"
+users = mentee.Mentee(csv_file)
+print(users.data)
 
-loaded_data = user.load_mentee("mentees_list.csv")       # load users from csv
+## or user can input the name of csv
+# csv_input = input("Insert a name of csv file: ")
+# users = mentee.Mentee(csv_input)
+# print(users.data)
 
+
+'''
 number_of_mentees = user.count_mentees(loaded_data)
 # print(f"Number of mentees: {number_of_mentees}")
 
@@ -29,5 +37,9 @@ shortest_length, s_name = user.get_shortest(full_names)
 #  Report
 report_data = {"number of mentees" : number_of_mentees, "languages" : list(languages), "average full name length" : avg_length, "longest length full name/s" : (longest_length, l_name), "shortest length full name/s" : (shortest_length, s_name)}
 
-with open("mentees_report.json", "w") as f:
-    json.dump(report_data, f, indent=4)
+
+if __name__ == "__main__":
+    with open("report.json", "w") as f:
+        json.dump(report_data, f, indent=4)
+
+'''

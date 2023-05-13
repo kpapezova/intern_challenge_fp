@@ -1,22 +1,16 @@
 import json
-import csv
 from statistics import mean
+import pandas as pd
 
 
 class Mentee:
 
-    def load_mentee(self, csv_file):
-        "Load csv file and clean data (get rid of white spaces). Return list of dictionaries (one dict for each mentee)"
-        with open(csv_file, "r") as f:
-            reader = csv.reader(f)
-            header = next(reader)       # to make first line as variable "header"
-            data = []      # list of mentees
-            for row in reader:
-                data.append({header[0] : int(row[0]), header[1] : row[1].strip(), header[2] : row[2].strip(), header[3] : row[3].strip()})
-        
-            return data
+    def __init__(self, data):
+        self.data = pd.read_csv(data)
 
 
+
+'''
     def count_mentees(self, data):
         "Count mentees and return the number of mentees"
         num_of_mentees = len(data)
@@ -95,3 +89,5 @@ class Mentee:
                 pass
 
         return shortest_len, shortest_names
+
+'''
