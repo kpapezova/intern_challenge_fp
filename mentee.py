@@ -8,12 +8,12 @@ class Mentee:
     def __init__(self, data):
         self.data = pd.read_csv(data)
         self.num_of_mentees = len(self.data)
-        self.languages = set(self.data['language'])
-        self.full_names = self.data['first_name'.strip()] + ' ' + self.data['last_name'.strip()]
+        self.languages = set(self.data["language"])
+        self.full_names = self.data["first_name".strip()] + ' ' + self.data["last_name".strip()]
 
 
     def get_average(self):
-        "Return an average length of mentees full names"
+        """Return an average length of mentees full names"""
         inp_lst = []
         
         for i in range(len(self.full_names)):
@@ -26,7 +26,7 @@ class Mentee:
 
 
     def get_longest(self):
-        "Return longest full name/s"
+        """Return longest full name/s"""
         longest_len = 0
         longest_names = [" "]
 
@@ -45,7 +45,7 @@ class Mentee:
 
 
     def get_shortest(self):
-        "Return shortest full name/s"
+        """Return shortest full name/s"""
         shortest_len = 20
         shortest_names = [" "]
 

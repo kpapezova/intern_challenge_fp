@@ -1,12 +1,12 @@
 {
     "number of mentees": 100,
     "languages": [
-        "Polish",
-        "English",
-        "German",
         "Czech",
-        "Spanish",
+        "English",
         "Slovak",
+        "Spanish",
+        "German",
+        "Polish",
         "Romanian"
     ],
     "average full name length": 12,
