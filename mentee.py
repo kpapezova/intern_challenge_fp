@@ -5,8 +5,8 @@ import pandas as pd
 
 class Mentee:
 
-    def __init__(self, data):
-        self.data = pd.read_csv(data)
+    def __init__(self, csv_file):
+        self.data = pd.read_csv(csv_file)
         self.num_of_mentees = len(self.data)
         self.languages = set(self.data["language"])
         self.full_names = self.data["first_name".strip()] + ' ' + self.data["last_name".strip()]
