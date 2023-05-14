@@ -21,16 +21,14 @@ class TestMentee():
         assert users.full_names[4] == 'Aileen Olvera'
 
 
-    # def test_get_average(self):
-    #     "Return an average length of metees full names"
-    #     mt = Mentee()
-    #     assert mt.get_average(test_names) == 11
+    def test_get_average(self):
+        """Return an average length of metees full names"""
+        assert users.get_average() == 11
 
-    # def test_get_longest(self):
-    #     "Return a longest full name"
-    #     mt = Mentee()
-    #     assert mt.get_longest(test_names) == (15, ['Kristina Pfeifer'])
+    def test_get_longest(self):
+        """Return a longest full name/s"""
+        assert users.get_longest() == (15, ['Kristina Pfeifer'])
 
-    # def test_get_shortest(self):
-    #     mt = Mentee()
-    #     assert mt.get_shortest(test_names) == (9, ['Lacy Keefe', 'Luisa Nagy'])
+    def test_get_shortest(self):
+        """Return a shortest full name/s"""
+        assert users.get_shortest() == (9, ['Lacy Keefe', 'Luisa Nagy'])
