@@ -1,5 +1,3 @@
-"# intern_challenge_fp" 
-
 **pandas**
 - pandas library has to be installed:  
   (venv) $ pip install pandas
